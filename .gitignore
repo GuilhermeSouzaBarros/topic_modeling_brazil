@@ -3,3 +3,4 @@ __pycache__/
 bin/
 brazil_wikipedia_articles/
 preprocessed/
+csv/
