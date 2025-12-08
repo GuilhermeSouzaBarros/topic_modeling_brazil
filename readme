@@ -3,6 +3,14 @@ source .venv/bin/activate
 pip install -r requirements
 python3 -m spacy download en_core_web_sm
 
-python3 download.py         // skip if you already have the txts
+python3 download.py         // ou baixe o arquivo do drive no link: https://drive.google.com/file/d/1X-slaBc0R9HaOWBYDDf1xgfiOX74Qv2G/view?usp=sharing
 python3 preprocesser.py
-phthon3 main.py <num_topics> <num_words_per_topic>
+python3 main.py <num_topics> <num_words_per_topic> // <num_topics> pode ser None para que o próprio algoritmo decida o número de tópicos.
+
+Ao terminar de executar será gerado:
+    Um csv com os tópicos, palavras chaves e um documento representativo, salvo em csv/topics_<num_topics>_<num_words_per_topic>.csv;
+    Uma figura com um gŕafico de pontos interativo, cada ponto é um documento e sua cor é seu tópico, salvo em bin/fig_documents_<num_topics>_<num_words_per_topic>;
+    Uma figura com o diagrama de hierarquia de tópicos, salvo em bin/fig_hierarchical_<num_topics>_<num_words_per_topic>.
+
+Para visualizar as figuras novamente sem executar o main.py novamente apenas use:
+    python3 show_figs.py <num_topics> <num_words_per_topic>
